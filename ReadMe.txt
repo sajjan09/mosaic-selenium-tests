@@ -8,8 +8,23 @@ Prerequisites:
 -------------
 You would need Firefox Browser and Eclipse IDE on Windows platform to run these tests
 
-Steps to run the tests:
-----------------------
+Steps to run using Maven:
+-------------------------
+>Make sure you have latest Java verion 8.1 and maven setup
+>Download "geckodriver-v0.20.1-win64.zip" and unzip
+>note down the path of gekodriver.exe file as this needs to added in each test class' setUp method.
+>From project root folder, run these commands:
+1) To build the project:
+mvn clean install   
+
+2) To generate surefire report in HTML:
+mvn surefire-report:report site -DgenerateReports=false
+ 
+>A Sample report has been copied into: docs\surefire-reports folder
+
+
+Steps to run the tests without using maven:
+------------------------------------------------------------------
 1) Expand the provided zip file and import the project from MosaicSmartData folder into Eclipse.
 2)Make sure you have latest Java verion 8.1
 3)Download selenium-java-3.12.0.zip and unzip it
